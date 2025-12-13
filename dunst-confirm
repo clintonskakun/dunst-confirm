@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# $1: The custom message/prompt to display (e.g., "Kill process 1234?")
+# $2: The command to execute if confirmed (e.g., "kill 1234")
+
+# Ensure required parameters are provided
+if [ -z "$1" ] || [ -z "$2" ]; then
+    echo "Usage: $0 <message_prompt> <command>"
+    exit 1
+fi
+
+MESSAGE_PROMPT="$1"
+COMMAND_TO_RUN="$2"
+
+# 1. Send the notification with only the explicit 'confirm' action.
+# The shell pauses here, waiting for the output (or process termination).
+ACTION=$(dunstify \
+                 -A confirm,Confirm_YES \
+                 -r 9999 \
+                 "$MESSAGE_PROMPT" \
+                 "Command: $COMMAND_TO_RUN. [Mod+Y/Mod+N]." | grep -oE 'confirm')
+
+# 2. Check the action key
+if [ "$ACTION" = "confirm" ]; then
+    # Execute the command
+    eval "$COMMAND_TO_RUN"
+fi
