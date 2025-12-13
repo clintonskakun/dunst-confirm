@@ -1,15 +1,6 @@
 # 🔔 dunst-confirm
 
-`dunst-confirm` is a simple yet powerful Bash script that leverages the lightweight and customizable notification daemon **Dunst** to create interactive, command-line-triggered confirmation prompts.
-
-Instead of interrupting your workflow with a terminal prompt, it pops up a sleek, temporary notification that requires a keybind (or a click) to confirm or dismiss the execution of a potentially destructive or long-running command.
-
-## ✨ Features
-
-* **Non-Blocking:** Uses a floating notification that doesn't steal focus.
-* **Custom Prompts:** Easily pass any confirmation message and command.
-* **Keybind Integration:** Designed to work perfectly with window managers like **Sway**, **Hyprland**, **i3**, and others by utilizing their keybinding features for quick confirmation or dismissal.
-* **Minimal Dependency:** Requires only `dunstify` (part of Dunst) and standard Bash utilities.
+Mouseless setup using Dunst. For the rest of who use WM setups and don't want to install all kinds of deps.
 
 ## ⚙️ Installation
 
