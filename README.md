@@ -2,6 +2,8 @@
 
 Mouseless setup using Dunst. For the rest of who use WM setups and don't want to install all kinds of deps.
 
+I use this script because I dind't like swaynag that forces you to click "Yes" instead of having a keyboard bind.
+
 ## ⚙️ Installation
 
 ### 1. Prerequisites
