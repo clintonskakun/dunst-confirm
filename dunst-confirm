@@ -13,7 +13,7 @@ ACTION=$(dunstify \
                  -A confirm,Confirm_YES \
                  -r 9999 \
                  "$MESSAGE_PROMPT" \
-                 "Command: $COMMAND_TO_RUN. [Mod+Y/Mod+N]." | grep -oE 'confirm')
+                 "[Mod+Y/Mod+N]." | grep -oE 'confirm')
 
 if [ "$ACTION" = "confirm" ]; then
     eval "$COMMAND_TO_RUN"
